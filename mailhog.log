@@ -1,0 +1,609 @@
+2025/11/07 08:25:26 Using in-memory storage
+2025/11/07 08:25:26 [SMTP] Binding to address: 0.0.0.0:1025
+[HTTP] Binding to address: 0.0.0.0:8025
+2025/11/07 08:25:26 Serving under http://0.0.0.0:8025/
+Creating API v1 with WebPath: 
+Creating API v2 with WebPath: 
+[APIv2] GET /api/v2/jim
+[APIv2] GET /api/v2/messages
+[APIv2] GET /api/v2/websocket
+[APIv1] KEEPALIVE /api/v1/events
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] Starting session
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] [PROTO: INVALID] Started session, switching to ESTABLISH state
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] Sent 35 bytes: '220 mailhog.example ESMTP MailHog\r\n'
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] Received 16 bytes: 'EHLO localhost\r\n'
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] [PROTO: ESTABLISH] Processing line: EHLO localhost
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] [PROTO: ESTABLISH] In state 1, got command 'EHLO', args 'localhost'
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] [PROTO: ESTABLISH] In ESTABLISH state
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] [PROTO: ESTABLISH] Got EHLO command, switching to MAIL state
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] Sent 21 bytes: '250-Hello localhost\r\n'
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] Sent 16 bytes: '250-PIPELINING\r\n'
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] Sent 16 bytes: '250 AUTH PLAIN\r\n'
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] Received 31 bytes: 'MAIL FROM:<tuapp@example.com>\r\n'
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] [PROTO: MAIL] Processing line: MAIL FROM:<tuapp@example.com>
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] [PROTO: MAIL] In state 6, got command 'MAIL', args 'FROM:<tuapp@example.com>'
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] [PROTO: MAIL] In MAIL state
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] [PROTO: MAIL] Got MAIL command, switching to RCPT state
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] Sent 33 bytes: '250 Sender tuapp@example.com ok\r\n'
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] Received 36 bytes: 'RCPT TO:<destinatario@example.com>\r\n'
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] [PROTO: RCPT] Processing line: RCPT TO:<destinatario@example.com>
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] [PROTO: RCPT] In state 7, got command 'RCPT', args 'TO:<destinatario@example.com>'
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] [PROTO: RCPT] In RCPT state
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] [PROTO: RCPT] Got RCPT command
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] Sent 43 bytes: '250 Recipient destinatario@example.com ok\r\n'
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] Received 6 bytes: 'DATA\r\n'
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] [PROTO: RCPT] Processing line: DATA
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] [PROTO: RCPT] In state 7, got command 'DATA', args ''
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] [PROTO: RCPT] In RCPT state
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] [PROTO: RCPT] Got DATA command, switching to DATA state
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] Sent 37 bytes: '354 End data with <CR><LF>.<CR><LF>\r\n'
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] Received 38 bytes: 'Date: Fri, 7 Nov 2025 08:27:15 -0600\r\n'
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] Received 150 bytes: 'To: Usuario <destinatario@example.com>\r\nFrom: Mi App <tuapp@example.com>\r\nSubject: =?iso-8859-1?Q?C=C3=B3digo_de_verificaci=C3=B3n_Barbara_Eventos?=\r\n'
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] Received 135 bytes: 'Message-ID: <bo5LfiufiwwJ9wnhbeM96ucx2P8OUYP6Q1aGNjh4g@localhost>\r\nX-Mailer: PHPMailer 6.9.1 (https://github.com/PHPMailer/PHPMailer)\r\n'
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] Received 64 bytes: 'MIME-Version: 1.0\r\nContent-Type: text/html; charset=iso-8859-1\r\n'
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] Received 35 bytes: 'Content-Transfer-Encoding: 8bit\r\n\r\n'
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] Received 522 bytes: 'Hola: <b> EDGARD GONZALEZ</b>:<br><br>Hemos recibido un intento de inicio de sesión al Portal de Barbara Eventos.<br><br>Para autorizarlo, por favor ingrese este código de verificación:<br><br>🛡️ Código de autenticación: <b> 638361</b><br><br><b>⚠️ Importante:</b><br><br>.    Nunca compartas este código con nadie.<br>.    Si no reconoces este intento de acceso, cambia tu contraseña <br>     inmediatamente o contacta a soporte de Barbara Eventos.<br><br>Barbara Eventos<br>info@clubeventosbarbaras.com\r\n'
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] Received 5 bytes: '\r\n.\r\n'
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] [PROTO: DATA] Got EOF, storing message and switching to MAIL state
+2025/11/07 08:27:15 Parsing Content from string: 'Date: Fri, 7 Nov 2025 08:27:15 -0600
+To: Usuario <destinatario@example.com>
+From: Mi App <tuapp@example.com>
+Subject: =?iso-8859-1?Q?C=C3=B3digo_de_verificaci=C3=B3n_Barbara_Eventos?=
+Message-ID: <bo5LfiufiwwJ9wnhbeM96ucx2P8OUYP6Q1aGNjh4g@localhost>
+X-Mailer: PHPMailer 6.9.1 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: text/html; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+
+Hola: <b> EDGARD GONZALEZ</b>:<br><br>Hemos recibido un intento de inicio de sesión al Portal de Barbara Eventos.<br><br>Para autorizarlo, por favor ingrese este código de verificación:<br><br>🛡️ Código de autenticación: <b> 638361</b><br><br><b>⚠️ Importante:</b><br><br>.    Nunca compartas este código con nadie.<br>.    Si no reconoces este intento de acceso, cambia tu contraseña <br>     inmediatamente o contacta a soporte de Barbara Eventos.<br><br>Barbara Eventos<br>info@clubeventosbarbaras.com
+'
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] Storing message CXenOe88O3mcbDdwCx1JekrVWo5f34kOjuU50X8_zBg=@mailhog.example
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] Sent 80 bytes: '250 Ok: queued as CXenOe88O3mcbDdwCx1JekrVWo5f34kOjuU50X8_zBg=@mailhog.example\r\n'
+Got message in APIv2 websocket channel
+[APIv2] BROADCAST /api/v2/websocket
+Got message in APIv1 event stream
+Sending content: {
+  "ID": "CXenOe88O3mcbDdwCx1JekrVWo5f34kOjuU50X8_zBg=@mailhog.example",
+  "From": {
+    "Relays": null,
+    "Mailbox": "tuapp",
+    "Domain": "example.com",
+    "Params": ""
+  },
+  "To": [
+    {
+      "Relays": null,
+      "Mailbox": "destinatario",
+      "Domain": "example.com",
+      "Params": ""
+    }
+  ],
+  "Content": {
+    "Headers": {
+      "Content-Transfer-Encoding": [
+        "8bit"
+      ],
+      "Content-Type": [
+        "text/html; charset=iso-8859-1"
+      ],
+      "Date": [
+        "Fri, 7 Nov 2025 08:27:15 -0600"
+      ],
+      "From": [
+        "Mi App \u003ctuapp@example.com\u003e"
+      ],
+      "MIME-Version": [
+        "1.0"
+      ],
+      "Message-ID": [
+        "\u003cbo5LfiufiwwJ9wnhbeM96ucx2P8OUYP6Q1aGNjh4g@localhost\u003e"
+      ],
+      "Received": [
+        "from localhost by mailhog.example (MailHog)\r\n          id CXenOe88O3mcbDdwCx1JekrVWo5f34kOjuU50X8_zBg=@mailhog.example; Fri, 07 Nov 2025 08:27:15 -0600"
+      ],
+      "Return-Path": [
+        "\u003ctuapp@example.com\u003e"
+      ],
+      "Subject": [
+        "=?iso-8859-1?Q?C=C3=B3digo_de_verificaci=C3=B3n_Barbara_Eventos?="
+      ],
+      "To": [
+        "Usuario \u003cdestinatario@example.com\u003e"
+      ],
+      "X-Mailer": [
+        "PHPMailer 6.9.1 (https://github.com/PHPMailer/PHPMailer)"
+      ]
+    },
+    "Body": "Hola: \u003cb\u003e EDGARD GONZALEZ\u003c/b\u003e:\u003cbr\u003e\u003cbr\u003eHemos recibido un intento de inicio de sesión al Portal de Barbara Eventos.\u003cbr\u003e\u003cbr\u003ePara autorizarlo, por favor ingrese este código de verificación:\u003cbr\u003e\u003cbr\u003e🛡️ Código de autenticación: \u003cb\u003e 638361\u003c/b\u003e\u003cbr\u003e\u003cbr\u003e\u003cb\u003e⚠️ Importante:\u003c/b\u003e\u003cbr\u003e\u003cbr\u003e.    Nunca compartas este código con nadie.\u003cbr\u003e.    Si no reconoces este intento de acceso, cambia tu contraseña \u003cbr\u003e     inmediatamente o contacta a soporte de Barbara Eventos.\u003cbr\u003e\u003cbr\u003eBarbara Eventos\u003cbr\u003einfo@clubeventosbarbaras.com\r\n",
+    "Size": 944,
+    "MIME": null
+  },
+  "Created": "2025-11-07T08:27:15.0555809-06:00",
+  "MIME": null,
+  "Raw": {
+    "From": "tuapp@example.com",
+    "To": [
+      "destinatario@example.com"
+    ],
+    "Data": "Date: Fri, 7 Nov 2025 08:27:15 -0600\r\nTo: Usuario \u003cdestinatario@example.com\u003e\r\nFrom: Mi App \u003ctuapp@example.com\u003e\r\nSubject: =?iso-8859-1?Q?C=C3=B3digo_de_verificaci=C3=B3n_Barbara_Eventos?=\r\nMessage-ID: \u003cbo5LfiufiwwJ9wnhbeM96ucx2P8OUYP6Q1aGNjh4g@localhost\u003e\r\nX-Mailer: PHPMailer 6.9.1 (https://github.com/PHPMailer/PHPMailer)\r\nMIME-Version: 1.0\r\nContent-Type: text/html; charset=iso-8859-1\r\nContent-Transfer-Encoding: 8bit\r\n\r\nHola: \u003cb\u003e EDGARD GONZALEZ\u003c/b\u003e:\u003cbr\u003e\u003cbr\u003eHemos recibido un intento de inicio de sesión al Portal de Barbara Eventos.\u003cbr\u003e\u003cbr\u003ePara autorizarlo, por favor ingrese este código de verificación:\u003cbr\u003e\u003cbr\u003e🛡️ Código de autenticación: \u003cb\u003e 638361\u003c/b\u003e\u003cbr\u003e\u003cbr\u003e\u003cb\u003e⚠️ Importante:\u003c/b\u003e\u003cbr\u003e\u003cbr\u003e.    Nunca compartas este código con nadie.\u003cbr\u003e.    Si no reconoces este intento de acceso, cambia tu contraseña \u003cbr\u003e     inmediatamente o contacta a soporte de Barbara Eventos.\u003cbr\u003e\u003cbr\u003eBarbara Eventos\u003cbr\u003einfo@clubeventosbarbaras.com\r\n",
+    "Helo": "localhost"
+  }
+}
+
+[APIv1] BROADCAST /api/v1/events
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] Received 6 bytes: 'QUIT\r\n'
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] [PROTO: MAIL] Processing line: QUIT
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] [PROTO: MAIL] In state 6, got command 'QUIT', args ''
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] [PROTO: MAIL] Got QUIT verb, staying in MAIL state
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] Sent 9 bytes: '221 Bye\r\n'
+2025/11/07 08:27:15 [SMTP 127.0.0.1:63902] Session ended
+[APIv1] GET /api/v1/messages/CXenOe88O3mcbDdwCx1JekrVWo5f34kOjuU50X8_zBg=@mailhog.example
+
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] Starting session
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] [PROTO: INVALID] Started session, switching to ESTABLISH state
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] Sent 35 bytes: '220 mailhog.example ESMTP MailHog\r\n'
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] Received 16 bytes: 'EHLO localhost\r\n'
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] [PROTO: ESTABLISH] Processing line: EHLO localhost
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] [PROTO: ESTABLISH] In state 1, got command 'EHLO', args 'localhost'
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] [PROTO: ESTABLISH] In ESTABLISH state
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] [PROTO: ESTABLISH] Got EHLO command, switching to MAIL state
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] Sent 21 bytes: '250-Hello localhost\r\n'
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] Sent 16 bytes: '250-PIPELINING\r\n'
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] Sent 16 bytes: '250 AUTH PLAIN\r\n'
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] Received 31 bytes: 'MAIL FROM:<tuapp@example.com>\r\n'
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] [PROTO: MAIL] Processing line: MAIL FROM:<tuapp@example.com>
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] [PROTO: MAIL] In state 6, got command 'MAIL', args 'FROM:<tuapp@example.com>'
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] [PROTO: MAIL] In MAIL state
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] [PROTO: MAIL] Got MAIL command, switching to RCPT state
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] Sent 33 bytes: '250 Sender tuapp@example.com ok\r\n'
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] Received 36 bytes: 'RCPT TO:<destinatario@example.com>\r\n'
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] [PROTO: RCPT] Processing line: RCPT TO:<destinatario@example.com>
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] [PROTO: RCPT] In state 7, got command 'RCPT', args 'TO:<destinatario@example.com>'
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] [PROTO: RCPT] In RCPT state
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] [PROTO: RCPT] Got RCPT command
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] Sent 43 bytes: '250 Recipient destinatario@example.com ok\r\n'
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] Received 6 bytes: 'DATA\r\n'
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] [PROTO: RCPT] Processing line: DATA
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] [PROTO: RCPT] In state 7, got command 'DATA', args ''
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] [PROTO: RCPT] In RCPT state
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] [PROTO: RCPT] Got DATA command, switching to DATA state
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] Sent 37 bytes: '354 End data with <CR><LF>.<CR><LF>\r\n'
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] Received 38 bytes: 'Date: Fri, 7 Nov 2025 10:19:38 -0600\r\n'
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] Received 74 bytes: 'To: Usuario <destinatario@example.com>\r\nFrom: Mi App <tuapp@example.com>\r\n'
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] Received 76 bytes: 'Subject: =?iso-8859-1?Q?C=C3=B3digo_de_verificaci=C3=B3n_Barbara_Eventos?=\r\n'
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] Received 135 bytes: 'Message-ID: <EpIRvDwIg3nY41rOsqiK0YMHXEVeXFT5qX9d8SaEY@localhost>\r\nX-Mailer: PHPMailer 6.9.1 (https://github.com/PHPMailer/PHPMailer)\r\n'
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] Received 64 bytes: 'MIME-Version: 1.0\r\nContent-Type: text/html; charset=iso-8859-1\r\n'
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] Received 35 bytes: 'Content-Transfer-Encoding: 8bit\r\n\r\n'
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] Received 524 bytes: 'Hola: <b> EDGARD GONZALEZ</b>:<br><br>Hemos recibido un intento de inicio de sesión al Portal de Barbara Eventos.<br><br>Para autorizarlo, por favor ingrese este código de verificación:<br><br>🛡️ Código de autenticación: <b> 169898</b><br><br><b>⚠️ Importante:</b><br><br>.    Nunca compartas este código con nadie.<br>.    Si no reconoces este intento de acceso, cambia tu contraseña <br>     inmediatamente o contacta a soporte de Barbara Eventos.<br><br>Barbara Eventos<br>info@clubeventosbarbaras.com\r\n\r\n'
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] Received 3 bytes: '.\r\n'
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] [PROTO: DATA] Got EOF, storing message and switching to MAIL state
+2025/11/07 10:19:38 Parsing Content from string: 'Date: Fri, 7 Nov 2025 10:19:38 -0600
+To: Usuario <destinatario@example.com>
+From: Mi App <tuapp@example.com>
+Subject: =?iso-8859-1?Q?C=C3=B3digo_de_verificaci=C3=B3n_Barbara_Eventos?=
+Message-ID: <EpIRvDwIg3nY41rOsqiK0YMHXEVeXFT5qX9d8SaEY@localhost>
+X-Mailer: PHPMailer 6.9.1 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: text/html; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+
+Hola: <b> EDGARD GONZALEZ</b>:<br><br>Hemos recibido un intento de inicio de sesión al Portal de Barbara Eventos.<br><br>Para autorizarlo, por favor ingrese este código de verificación:<br><br>🛡️ Código de autenticación: <b> 169898</b><br><br><b>⚠️ Importante:</b><br><br>.    Nunca compartas este código con nadie.<br>.    Si no reconoces este intento de acceso, cambia tu contraseña <br>     inmediatamente o contacta a soporte de Barbara Eventos.<br><br>Barbara Eventos<br>info@clubeventosbarbaras.com
+'
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] Storing message 47DnvQhxBBno37BBAxIMaOlTNeOwt-EAIalnD8btxOo=@mailhog.example
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] Sent 80 bytes: '250 Ok: queued as 47DnvQhxBBno37BBAxIMaOlTNeOwt-EAIalnD8btxOo=@mailhog.example\r\n'
+Got message in APIv2 websocket channel
+[APIv2] BROADCAST /api/v2/websocket
+Got message in APIv1 event stream
+Sending content: {
+  "ID": "47DnvQhxBBno37BBAxIMaOlTNeOwt-EAIalnD8btxOo=@mailhog.example",
+  "From": {
+    "Relays": null,
+    "Mailbox": "tuapp",
+    "Domain": "example.com",
+    "Params": ""
+  },
+  "To": [
+    {
+      "Relays": null,
+      "Mailbox": "destinatario",
+      "Domain": "example.com",
+      "Params": ""
+    }
+  ],
+  "Content": {
+    "Headers": {
+      "Content-Transfer-Encoding": [
+        "8bit"
+      ],
+      "Content-Type": [
+        "text/html; charset=iso-8859-1"
+      ],
+      "Date": [
+        "Fri, 7 Nov 2025 10:19:38 -0600"
+      ],
+      "From": [
+        "Mi App \u003ctuapp@example.com\u003e"
+      ],
+      "MIME-Version": [
+        "1.0"
+      ],
+      "Message-ID": [
+        "\u003cEpIRvDwIg3nY41rOsqiK0YMHXEVeXFT5qX9d8SaEY@localhost\u003e"
+      ],
+      "Received": [
+        "from localhost by mailhog.example (MailHog)\r\n          id 47DnvQhxBBno37BBAxIMaOlTNeOwt-EAIalnD8btxOo=@mailhog.example; Fri, 07 Nov 2025 10:19:38 -0600"
+      ],
+      "Return-Path": [
+        "\u003ctuapp@example.com\u003e"
+      ],
+      "Subject": [
+        "=?iso-8859-1?Q?C=C3=B3digo_de_verificaci=C3=B3n_Barbara_Eventos?="
+      ],
+      "To": [
+        "Usuario \u003cdestinatario@example.com\u003e"
+      ],
+      "X-Mailer": [
+        "PHPMailer 6.9.1 (https://github.com/PHPMailer/PHPMailer)"
+      ]
+    },
+    "Body": "Hola: \u003cb\u003e EDGARD GONZALEZ\u003c/b\u003e:\u003cbr\u003e\u003cbr\u003eHemos recibido un intento de inicio de sesión al Portal de Barbara Eventos.\u003cbr\u003e\u003cbr\u003ePara autorizarlo, por favor ingrese este código de verificación:\u003cbr\u003e\u003cbr\u003e🛡️ Código de autenticación: \u003cb\u003e 169898\u003c/b\u003e\u003cbr\u003e\u003cbr\u003e\u003cb\u003e⚠️ Importante:\u003c/b\u003e\u003cbr\u003e\u003cbr\u003e.    Nunca compartas este código con nadie.\u003cbr\u003e.    Si no reconoces este intento de acceso, cambia tu contraseña \u003cbr\u003e     inmediatamente o contacta a soporte de Barbara Eventos.\u003cbr\u003e\u003cbr\u003eBarbara Eventos\u003cbr\u003einfo@clubeventosbarbaras.com\r\n",
+    "Size": 944,
+    "MIME": null
+  },
+  "Created": "2025-11-07T10:19:38.5120607-06:00",
+  "MIME": null,
+  "Raw": {
+    "From": "tuapp@example.com",
+    "To": [
+      "destinatario@example.com"
+    ],
+    "Data": "Date: Fri, 7 Nov 2025 10:19:38 -0600\r\nTo: Usuario \u003cdestinatario@example.com\u003e\r\nFrom: Mi App \u003ctuapp@example.com\u003e\r\nSubject: =?iso-8859-1?Q?C=C3=B3digo_de_verificaci=C3=B3n_Barbara_Eventos?=\r\nMessage-ID: \u003cEpIRvDwIg3nY41rOsqiK0YMHXEVeXFT5qX9d8SaEY@localhost\u003e\r\nX-Mailer: PHPMailer 6.9.1 (https://github.com/PHPMailer/PHPMailer)\r\nMIME-Version: 1.0\r\nContent-Type: text/html; charset=iso-8859-1\r\nContent-Transfer-Encoding: 8bit\r\n\r\nHola: \u003cb\u003e EDGARD GONZALEZ\u003c/b\u003e:\u003cbr\u003e\u003cbr\u003eHemos recibido un intento de inicio de sesión al Portal de Barbara Eventos.\u003cbr\u003e\u003cbr\u003ePara autorizarlo, por favor ingrese este código de verificación:\u003cbr\u003e\u003cbr\u003e🛡️ Código de autenticación: \u003cb\u003e 169898\u003c/b\u003e\u003cbr\u003e\u003cbr\u003e\u003cb\u003e⚠️ Importante:\u003c/b\u003e\u003cbr\u003e\u003cbr\u003e.    Nunca compartas este código con nadie.\u003cbr\u003e.    Si no reconoces este intento de acceso, cambia tu contraseña \u003cbr\u003e     inmediatamente o contacta a soporte de Barbara Eventos.\u003cbr\u003e\u003cbr\u003eBarbara Eventos\u003cbr\u003einfo@clubeventosbarbaras.com\r\n",
+    "Helo": "localhost"
+  }
+}
+
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] Received 6 bytes: 'QUIT\r\n'
+[APIv1] BROADCAST /api/v1/events
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] [PROTO: MAIL] Processing line: QUIT
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] [PROTO: MAIL] In state 6, got command 'QUIT', args ''
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] [PROTO: MAIL] Got QUIT verb, staying in MAIL state
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] Sent 9 bytes: '221 Bye\r\n'
+2025/11/07 10:19:38 [SMTP 127.0.0.1:54479] Session ended
+[APIv2] GET /api/v2/messages
+[APIv1] GET /api/v1/messages/47DnvQhxBBno37BBAxIMaOlTNeOwt-EAIalnD8btxOo=@mailhog.example
+
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
+[APIv1] KEEPALIVE /api/v1/events
