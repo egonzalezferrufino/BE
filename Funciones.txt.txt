@@ -1,0 +1,236 @@
+CREATE OR REPLACE FUNCTION public.insertar_usuarion(nombre character varying, apellido character varying, usuario character varying, correo character varying, clave character varying, administ integer, operador integer, usuario_creacion integer, idinstitucion integer)
+ RETURNS SETOF integer
+ LANGUAGE plpgsql
+AS $function$
+begin
+RETURN QUERY
+INSERT INTO
+	 usuarios (
+		
+		u_nombre_completo, 
+		u_apellido_completo, 		
+		usuario, 
+		u_email, 
+		u_clave, 
+		administ, 
+		operador, 
+		u_estado, 
+		reset_clave, 
+		u_bloqueado, 
+		fecha_vencimiento, 
+		cantidad_intento, 
+		fecha_creacion, 
+		usuario_creacion, 
+		fecha_modifica, 
+		usuario_modifica, 
+		idinstitucion
+	)
+VALUES
+	(
+
+		NOMBRE,
+		APELLIDO,
+		USUARIO,
+		CORREO,		
+		CLAVE,
+		ADMINIST,
+		OPERADOR,
+		1,
+		0,
+		0,
+		CURRENT_DATE + 180,
+		0,
+		CURRENT_TIMESTAMP,
+		USUARIO_CREACION,
+		NULL,
+		NULL,			
+		IDINSTITUCION
+		
+	)
+RETURNING
+	ID_USUARIO;
+end;
+$function$
+
+
+--------------------------
+
+CREATE OR REPLACE FUNCTION public.actualizar_usuarion(idusuario1 integer, nombre1 character varying, apellido1 character varying, usuario1 character varying, correo character varying, administ1 integer, operador1 integer, estado integer, usuario_modifica1 integer, idinstitucion1 integer)
+ RETURNS SETOF integer
+ LANGUAGE plpgsql
+AS $function$
+BEGIN RETURN QUERY
+UPDATE	usuarios
+SET 
+		
+		u_nombre_completo = nombre1, 
+		u_apellido_completo = apellido1, 		
+		usuario = usuario1, 		
+		u_email = correo, 		
+		administ = administ1, 
+		operador = operador1, 	
+		u_estado = estado,
+		fecha_modifica = CURRENT_TIMESTAMP, 
+		usuario_modifica = usuario_modifica1, 
+		idinstitucion = idinstitucion1
+WHERE
+	  ID_USUARIO = idusuario1
+	
+RETURNING
+	ID_USUARIO;
+END;
+$function$
+
+
+--------------------------------------
+
+CREATE OR REPLACE FUNCTION public.actualizar_intentos(intentos integer, bloqueado integer, idusuario integer)
+ RETURNS SETOF integer
+ LANGUAGE plpgsql
+AS $function$
+begin
+RETURN QUERY
+UPDATE USUARIOS
+SET
+	CANTIDAD_INTENTO = INTENTOS,
+	U_BLOQUEADO = BLOQUEADO,
+	FECHA_MODIFICA = CURRENT_DATE,
+	USUARIO_MODIFICA = IDUSUARIO
+WHERE
+	ID_USUARIO = IDUSUARIO
+RETURNING
+	ID_USUARIO;
+end;
+$function$
+
+----------------------------------------
+
+CREATE OR REPLACE FUNCTION public.bloquear_usuario(iduser integer, estado integer, idusuario integer)
+ RETURNS SETOF integer
+ LANGUAGE plpgsql
+AS $function$
+	begin
+	RETURN QUERY
+	UPDATE usuarios
+	SET
+		U_BLOQUEADO = ESTADO,
+		CANTIDAD_INTENTO =
+			CASE	
+	        	WHEN ESTADO = 1 THEN   3
+	        	WHEN ESTADO = 0 THEN   0        
+		    END,
+		FECHA_MODIFICA = CURRENT_DATE,
+		USUARIO_MODIFICA = IDUSUARIO
+	WHERE
+		ID_USUARIO = IDUSER
+	RETURNING
+		ID_USUARIO;
+	end;
+	
+$function$
+
+-----------------------------------------
+CREATE OR REPLACE FUNCTION public.cambiar_clave(resetclave integer, clave character varying, fechavenc date, idusuario integer)
+ RETURNS SETOF integer
+ LANGUAGE plpgsql
+AS $function$
+begin
+IF RESETCLAVE = 1 THEN RETURN QUERY
+UPDATE USUARIOS
+SET
+	U_CLAVE = CLAVE,
+	CANTIDAD_INTENTO = 0,
+	RESET_CLAVE = 1,
+	FECHA_MODIFICA = CURRENT_DATE,
+	USUARIO_MODIFICA = IDUSUARIO
+WHERE
+	ID_USUARIO = IDUSUARIO RETURNING
+	ID_USUARIO;
+
+else
+RETURN QUERY
+UPDATE USUARIOS
+SET
+	U_CLAVE = CLAVE,
+	CANTIDAD_INTENTO = 0,
+	RESET_CLAVE = 0,
+	FECHA_VENCIMIENTO = FECHAVENC,
+	FECHA_MODIFICA = CURRENT_DATE,
+	USUARIO_MODIFICA = IDUSUARIO
+WHERE
+	ID_USUARIO = IDUSUARIO
+RETURNING
+	ID_USUARIO;
+
+END IF;
+end;
+$function$
+
+-------------------------------------------
+CREATE OR REPLACE FUNCTION public.cambiarestado_usuario(iduser integer, estado integer, idusuario integer)
+ RETURNS SETOF integer
+ LANGUAGE plpgsql
+AS $function$
+	begin
+	RETURN QUERY
+	UPDATE usuarios
+	SET
+		U_ESTADO = ESTADO,
+		FECHA_MODIFICA = CURRENT_DATE,
+		USUARIO_MODIFICA = IDUSUARIO
+	WHERE
+		ID_USUARIO = IDUSER
+	RETURNING
+		ID_USUARIO;
+	end;
+	
+$function$
+
+
+----------------------------------------
+
+CREATE OR REPLACE FUNCTION public.actualizar_productos(idproducto1 integer, nombre1 character varying, precio_compra1 double precision, precio_renta1 double precision)
+ RETURNS SETOF integer
+ LANGUAGE plpgsql
+AS $function$
+BEGIN RETURN QUERY
+UPDATE	productos
+SET 
+		
+		nombre = nombre1, 
+		precio = precio_compra1, 		
+		precio_renta = precio_renta1
+WHERE
+	  idproducto = idproducto1
+	
+RETURNING
+	IDPRODUCTO;
+END;
+$function$
+
+---------------------------------------------------
+
+CREATE OR REPLACE FUNCTION public.insertar_productos(nombre character varying, precio_compra double precision, precio_renta double precision)
+ RETURNS SETOF integer
+ LANGUAGE plpgsql
+AS $function$
+begin
+RETURN QUERY
+INSERT INTO
+	 productos (
+		nombre,
+		precio,
+		precio_renta		
+	)
+VALUES
+	(
+		NOMBRE,
+		precio_compra,
+		precio_renta		
+	)
+RETURNING
+	IDPRODUCTO;
+end;
+$function$
+
+
